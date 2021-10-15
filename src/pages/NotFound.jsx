@@ -1,6 +1,6 @@
 import React from 'react';
-import error from '../static/logos/undraw_page_not_found_su7k.svg'
-import '../styles/NotFound.scss';
+import error from '@logos/undraw_page_not_found_su7k.svg'
+import '@styles/NotFound.scss';
 
 const NotFound = () => {
   return (
