@@ -7,6 +7,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
+    publicPath: '/',
   },
   mode: 'development',
   resolve: {
@@ -30,12 +31,23 @@ module.exports = {
         ]
       },
       {
-        test: /\.s[ac]ss$/i,
+        test: /\.(css|scss)$/,
         use: [
           "style-loader", 
           "css-loader", 
           "sass-loader", 
         ]
+      },
+      {
+        test: /\.(png|jp(e*)g|svg|gif)$/,
+        use: [
+          {
+            loader: 'file-loader',
+              options: {
+                name: 'images/[hash]-[name].[ext]',
+              },
+          },
+        ],
       }
     ]
   },
@@ -49,6 +61,7 @@ module.exports = {
     }),
   ],
   devServer: {
+    historyApiFallback: true,
     allowedHosts: path.join(__dirname, 'dist'),
     compress: true,
     port: 8081,

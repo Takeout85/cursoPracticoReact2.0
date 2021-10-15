@@ -1,0 +1,96 @@
+@import 'vars';
+
+.notFound {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background: #7de28b;
+}
+
+.notFound-logo {
+  width: 100%;
+  max-width: 500px;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  color: $alert-color;
+}
+
+.notFound-error {
+  color: $alert-color;
+  width: 90%;
+  height: 100%;
+
+  animation: animationError 2s linear infinite;
+}
+
+.notFound-tittle {
+  font-weight: 800;
+  font-size: 30px;
+  text-shadow: 2px 2px 2px #444444;
+}
+
+.notFound-page {
+  width: 100%;
+  max-width: 500px;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.notFound-text {
+  text-align: center;
+  font-size: $lg;
+}
+
+.notFound-home {
+  width: 100px;
+  height: 40px;
+  border: 0px;
+  border-radius: 20px;
+  -webkit-box-shadow: 2px 2px 7px 5px rgba(0,0,0,0.26); 
+  box-shadow: 2px 2px 7px 5px rgba(0,0,0,0.26);
+}
+
+.notFound-home:active {
+  transform: scale(.95);
+}
+
+@keyframes animationError {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(.95);
+  }
+  50% {
+    transform: scale(.90);
+  }
+  75% {
+    transform: scale(.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+@media (min-width: 640px) {
+  .notFound {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .notFound-logo {
+    margin-bottom: 200px;
+  }
+
+}
