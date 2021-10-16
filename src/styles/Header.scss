@@ -1,9 +1,12 @@
 @import 'vars';
 nav {
+  width: 100%;
 	display: flex;
 	justify-content: space-between;
-	padding: 0 24px;
 	border-bottom: 1px solid $very-light-pink;
+  position: fixed;
+  top: 0;
+  background-color: $white;
 }
 .menu {
 	display: none;
@@ -11,10 +14,14 @@ nav {
 .nav-logo {
 	width: 100px;
 }
+
+.navbar-left,
+.navbar-right {
+  padding: 0 24px;
+} 
 .navbar-left ul,
 .navbar-right ul {
 	list-style: none;
-	padding: 0;
 	margin: 0;
 	display: flex;
 	align-items: center;

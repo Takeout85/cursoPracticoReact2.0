@@ -1,0 +1,19 @@
+{
+  "parserOptions": {
+    "ecmaVersion": 2018
+  },
+  "extends": [
+    "eslint:recommended",
+    "prettier"
+  ],
+  "env": {
+    "es6": true,
+    "react": true,
+    "jest": true
+  },
+  "rules": {
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": "error",
+  }
+}
+

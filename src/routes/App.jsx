@@ -22,15 +22,15 @@ const App = () => {
       <BrowserRouter>
         <Layout>
           <Switch>
-            <Route exact path="/cursoPracticoReact2.0/" component={Home} />
-            <Route exact path="/cursoPracticoReact2.0/login" component={Login} />
-            <Route exact path="/cursoPracticoReact2.0/password-recovery" component={PasswordRecovery} />
-            <Route exact path="/cursoPracticoReact2.0/send-email" component={SendEmail} />
-            <Route exact path="/cursoPracticoReact2.0/new-password" component={NewPassword} />
-            <Route exact path="/cursoPracticoReact2.0/account" component={MyAccount} />
-            <Route exact path="/cursoPracticoReact2.0/signup" component={CreateAccount} />
-            <Route exact path="/cursoPracticoReact2.0/checkout" component={Checkout} />
-            <Route exact path="/cursoPracticoReact2.0/orders" component={Orders} />
+            <Route exact path="/" component={Home} />
+            <Route exact path="/login" component={Login} />
+            <Route exact path="/password-recovery" component={PasswordRecovery} />
+            <Route exact path="/send-email" component={SendEmail} />
+            <Route exact path="/new-password" component={NewPassword} />
+            <Route exact path="/account" component={MyAccount} />
+            <Route exact path="/signup" component={CreateAccount} />
+            <Route exact path="/checkout" component={Checkout} />
+            <Route exact path="/orders" component={Orders} />
             <Route path="*" component={NotFound} />
           </Switch>
         </Layout>
