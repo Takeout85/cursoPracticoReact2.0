@@ -3,12 +3,14 @@
 .Menu {
 	width: 100px;
 	height: auto;
+  z-index: 1;
 	border: 1px solid $very-light-pink;
 	border-radius: 6px;
 	padding: 20px 20px 0 20px;
   position: absolute;
   top: 60px;
   right: 50px;
+  background-color: $white;
 }
 .Menu ul {
 	list-style: none;
@@ -19,12 +21,12 @@
 	text-align: end;
 }
 .Menu ul li:nth-child(1),
-.Menu ul li:nth-child(2) {
+.Menu ul li:nth-child(2),
+.Menu ul li:nth-child(3) {
 	font-weight: bold;
 }
 .Menu ul li:last-child {
 	padding-top: 20px;
-	border-top: 1px solid $very-light-pink;
 }
 .Menu ul li:last-child a {
 	color: $hospital-green;
@@ -35,4 +37,48 @@
 	text-decoration: none;
 	margin-bottom: 20px;
 	display: inline-block;
+}
+.menu-email {
+  display: none;
+}
+
+@media (max-width: 870px) {
+	.Menu {
+    width: 100%;
+    height: calc(30vh - 60px);
+    position: absolute;
+    top: calc(70vh + 60px);
+    left: 0;
+    padding: 0;
+    margin: 0;
+    z-index: 0;
+    border-top: 1px solid $very-light-pink;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+	}
+  .Menu ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  .Menu ul li {
+    width: 80%;
+    height: 30px;
+    text-align: start;
+    margin-left: 24px;
+    padding-left: 10px;
+  }
+  .menu-email {
+    display: block;
+  }
+  .Menu ul li:nth-child(4) {
+    padding-top: 0;
+  }
+  .Menu ul li:nth-child(4) a{
+    font-weight: bold;
+  }
 }

@@ -4,6 +4,7 @@ import { AppContext } from '@context/AppContext';
 import '@styles/OrderItem.scss';
 
 const OrderItem = ({ product }) => {
+
   const { removeFromCart } = useContext(AppContext);
 	return (
 		<div className="OrderItem">

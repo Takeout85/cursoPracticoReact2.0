@@ -16,7 +16,8 @@ nav {
 }
 
 .navbar-left,
-.navbar-right {
+.navbar-right,
+.menu {
   padding: 0 24px;
 } 
 .navbar-left ul,
@@ -32,6 +33,9 @@ nav {
 }
 .navbar-left ul {
 	margin-left: 12px;
+}
+.navbar-left ul img {
+  display: none;
 }
 .navbar-left ul li a,
 .navbar-right ul li a {
@@ -50,9 +54,13 @@ nav {
 	color: $very-light-pink;
 	font-size: $sm;
 	margin-right: 12px;
+  cursor: pointer;
+
 }
 .navbar-shopping-cart {
 	position: relative;
+  cursor: pointer;
+
 }
 .navbar-shopping-cart div {
 	width: 16px;
@@ -68,14 +76,46 @@ nav {
 	justify-content: center;
 	align-items: center;
 }
-@media (max-width: 640px) {
+@media (max-width: 870px) {
 	.menu {
 		display: block;
 	}
 	.navbar-left ul {
+    width: 100%;
+    height: 70vh;
 		display: none;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-around;
+    position: fixed;
+    top: 60px;
+    left: 0px;
+    padding: 0px;
+    margin: 0px;
+    background-color: $white;
 	}
+  .navbar-left ul li {
+    border-bottom: 1px solid $very-light-pink;
+    width: 80%;
+    height: 30px;
+    margin: 0px 24px;
+  }
+  .navbar-left ul li a{
+    color: $black;
+  }
+  .navbar-left ul img{
+    display: block;
+    position: absolute;
+    width: 20px;
+    top: 24px;
+    right: 24px;
+  }
+
 	.navbar-email {
 		display: none;
 	}
+  .navbar-left .toggle-true {
+    display: flex;
+  } 
+
 }

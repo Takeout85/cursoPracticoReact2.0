@@ -6,8 +6,10 @@ const initialState = {
 
 const useInitialState = () => {
   const [state, setState] = useState(initialState);
+  const [toggle , setToggle] = useState(false);
 
   const addToCart = (payload) => {
+    payload["addImage"] = true;
     setState({
       ...state,
       cart: [...state.cart, payload] 
@@ -15,6 +17,7 @@ const useInitialState = () => {
   }
 
   const removeFromCart = (payload) => {
+    payload["addImage"] = false;
     setState({
       ...state,
       cart: state.cart.filter(items => items.id != payload.id)
@@ -24,7 +27,9 @@ const useInitialState = () => {
   return {
     state,
     addToCart,
-    removeFromCart
+    removeFromCart,
+    toggle,
+    setToggle
   }
 }
 

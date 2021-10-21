@@ -2,12 +2,22 @@ import React, { useContext } from 'react';
 import '@styles/ProductItem.scss';
 import { AppContext } from '@context/AppContext';
 import addToCartImage from '@icons/bt_add_to_cart.svg';
+import addedCartImage from '@icons/bt_added_to_cart.svg'
 
-const ProductItem = ({ product }) => {
-  const { addToCart } = useContext(AppContext);
+const ProductItem = ({ product}) => {
+  const { state, addToCart, removeFromCart } = useContext(AppContext);
 
-  const handleCart = (item) => {
-    addToCart(item);
+
+  const handleCart =  (item) => {
+    let itemFind = state.cart.find(product => product.id === item.id)
+    
+    if (itemFind) {
+      removeFromCart(item);
+
+    } else {
+      addToCart(item);
+    }
+
   };
 
 	return (
@@ -19,7 +29,7 @@ const ProductItem = ({ product }) => {
 					<p>{product.title}</p>
 				</div>
 				<figure onClick={() => handleCart(product)}>
-					<img src={addToCartImage} alt="addtoCart" />
+					<img src={product.addImage? addedCartImage: addToCartImage} alt="addtoCart" />
 				</figure>
 			</div>
 		</div>

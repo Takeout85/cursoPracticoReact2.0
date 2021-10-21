@@ -11,6 +11,9 @@ const Menu = () => {
 				<li>
 					<a href="/">My account</a>
 				</li>
+        <li className="menu-email" >
+          platzi@example.com
+        </li>
 				<li>
 					<a href="/">Sign out</a>
 				</li>
